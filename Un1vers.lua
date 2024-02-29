@@ -543,7 +543,7 @@ end)
   	end    
 })
 
-PlayerTab:AddButton({
+VisualTab:AddButton({
 	Name = "Tracer",
 	Callback = function()
 			-- by Sv1nn
