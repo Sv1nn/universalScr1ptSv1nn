@@ -542,11 +542,3 @@ dwRunService.Heartbeat:Connect(function()
 end)
   	end    
 })
-
-PlayerTab:NewToggle("Toggle text", "Toggle Info", function(state)
-	if state then
-		game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 80
-	else
-		game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
-	end
-end)
