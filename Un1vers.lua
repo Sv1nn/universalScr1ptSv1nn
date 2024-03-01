@@ -38,39 +38,34 @@ PlayerTab:AddButton({
     
     })
     
-    PlayerTab:AddButton({
-        Name = "Spedhack",
-        Callback = function()
-                game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 80
-          end    
-      })
-    
-    PlayerTab:AddButton({
-      Name = "SpinBot",
-      Callback = function()
-              local player = game.Players.LocalPlayer 
-    local character = player.Character or player.CharacterAdded:Wait() 
-     
     local hRootPart = character:WaitForChild("HumanoidRootPart") 
-    local humanoid = character:WaitForChild("Humanoid") 
-     
-    humanoid.AutoRotate = false 
-     
-    local function keepLookingForward() 
-     hRootPart.CFrame = CFrame.new(hRootPart.Position, hRootPart.Position + character.HumanoidRootPart.CFrame.LookVector) 
-    end 
-     
-    game:GetService("RunService").Heartbeat:Connect(keepLookingForward)
-    
-    local player = game.Players.LocalPlayer
-    local character = player.Character or player.CharacterAdded:Wait()
-    local speed = 30
-    while true do
-     wait()
-     character.HumanoidRootPart.CFrame = character.HumanoidRootPart.CFrame * CFrame.Angles(0, math.rad(speed), 0)
-    end
-        end    
-    })
+local humanoid = character:WaitForChild("Humanoid") 
+ 
+humanoid.AutoRotate = false 
+ 
+local function keepLookingForward() 
+ hRootPart.CFrame = CFrame.new(hRootPart.Position, hRootPart.Position + character.HumanoidRootPart.CFrame.LookVector) 
+end 
+ 
+game:GetService("RunService").Heartbeat:Connect(keepLookingForward)
+
+local player = game.Players.LocalPlayer
+local character = player.Character or player.CharacterAdded:Wait()
+local speed = 30
+while true do
+ wait()
+ character.HumanoidRootPart.CFrame = character.HumanoidRootPart.CFrame * CFrame.Angles(0, math.rad(speed), 0)
+end
+
+OrionLib:MakeNotification({
+Name = "SvinnHub",
+Content = "SpeedhackOn",
+Image = "rbxassetid://4483345998",
+Time = 5
+})
+    end    
+})
+
 
 PlayerTab:AddButton({
   Name = "Noclip",
