@@ -5,8 +5,8 @@ local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shl
 local Window = OrionLib:MakeWindow({Name = "Sv1nn Hub", IntroText = "Sv1nn Hub", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
 
 OrionLib:MakeNotification({
-	Name = "Title!",
-	Content = "Sv1nnActivate",
+	Name = "Sv1nnActivate",
+	Content = "Hacking...",
 	Image = "rbxassetid://4483345998",
 	Time = 5
 })
