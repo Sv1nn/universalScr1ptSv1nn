@@ -67,21 +67,28 @@ PlayerTab:AddButton({
           end    
     })
 
-PlayerTab:AddButton({
-  Name = "Noclip",
-  Callback = function()
-        local runservice = game:GetService("RunService") -- this is the service for the fps idk it handles all processing
-
-        local player = game:GetService("Players").LocalPlayer
-        runservice.Stepped:Connect(function()
+    PlayerTab:AddButton({
+        Name = "NoClip",
+        Callback = function()
+            local runservice = game:GetService("RunService")
+    
+            local player = game:GetService("Players").LocalPlayer
+            runservice.Stepped:Connect(function()
             for i,v in pairs(player.Character:GetDescendants()) do
-                if v:IsA("BasePart") then
-                    v.CanCollide = false -- this disables the collision in your character(ALL COLLISIONS are disabled except for standing)
-                end
+            if v:IsA("BasePart") then
+            v.CanCollide = false
             end
-        end)
-    end    
-})
+            end
+            end)
+            
+            OrionLib:MakeNotification({
+            Name = "SviinHub",
+            Content = "NoclipOn",
+            Image = "rbxassetid://4483345998",
+            Time = 5
+            })
+          end    
+    })
 
 PlayerTab:AddButton({
   Name = "Fly (no use noclip)",
