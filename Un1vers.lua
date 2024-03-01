@@ -69,8 +69,8 @@ PlayerTab:AddButton({
         Content = "SpinbotOn",
         Image = "rbxassetid://4483345998",
         Time = 5
-        })
         end
+    })
 
 PlayerTab:AddButton({
   Name = "Noclip",
