@@ -25,12 +25,19 @@ local Section = PlayerTab:AddSection({
 })
 
 PlayerTab:AddButton({
-	Name = "Spedhack",
-	Callback = function()
-			game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 80
-	  end    
-  })
-
+    Name = "Speedhack",
+    Callback = function()
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 80
+    OrionLib:MakeNotification({
+    Name = "SvinnHub",
+    Content = "SpeedhackOn",
+    Image = "rbxassetid://4483345998",
+    Time = 5
+    })
+    end
+    
+    })
+    
 PlayerTab:AddButton({
   Name = "SpinBot",
   Callback = function()
