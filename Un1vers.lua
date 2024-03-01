@@ -38,10 +38,7 @@ PlayerTab:AddButton({
     
     })
     
-    PlayerTab:AddButton({
-        Name = "SpinBot",
-        Callback = function()
-                PlayerTab:AddButton({
+  PlayerTab:AddButton({
     Name = "Spinbot",
     Callback = function()
         local player = game.Players.LocalPlayer 
@@ -73,9 +70,9 @@ PlayerTab:AddButton({
     Content = "SpinbotOn",
     Image = "rbxassetid://4483345998",
     Time = 5
-    })
-    end
-
+    end  
+     })
+    
 PlayerTab:AddButton({
   Name = "Noclip",
   Callback = function()
