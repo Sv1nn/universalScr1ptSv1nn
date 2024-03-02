@@ -145,7 +145,7 @@ onof.TextColor3 = Color3.fromRGB(0, 0, 0)
 onof.TextSize = 14.000
  
 TextLabel.Parent = Frame
-TextLabel.BackgroundColor3 = Color3.fromRGB(242, 60, 255)
+TextLabel.BackgroundColor3 = Color3.fromRGB(128, 128, 128)
 TextLabel.Position = UDim2.new(0.469327301, 0, 0, 0)
 TextLabel.Size = UDim2.new(0, 100, 0, 28)
 TextLabel.Font = Enum.Font.SourceSans
