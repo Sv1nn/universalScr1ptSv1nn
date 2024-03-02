@@ -169,7 +169,7 @@ plus.TextWrapped = true
  
 speed.Name = "speed"
 speed.Parent = Frame
-speed.BackgroundColor3 = Color3.fromRGB(255, 85, 0)
+speed.BackgroundColor3 = Color3.fromRGB(192, 192, 192)
 speed.Position = UDim2.new(0.468421042, 0, 0.491228074, 0)
 speed.Size = UDim2.new(0, 44, 0, 28)
 speed.Font = Enum.Font.SourceSans
