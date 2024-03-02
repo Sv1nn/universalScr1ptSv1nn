@@ -90,7 +90,7 @@ PlayerTab:AddButton({
     })
 
     PlayerTab:AddButton({
-        Name = "Fly (No use NoClip)",
+        Name = "FlyV1",
         Callback = function()
            --Sv1nn--
 local main = Instance.new("ScreenGui")
@@ -424,13 +424,6 @@ end)
 PlayerTab:AddButton({
     Name = "FlyV2",
     Callback = function()
-    --[[
-FE Mobile Fly By Fedoratum#6195
-
-Type in chat !stop, to stop the script
-
-]]--
-
 local STARTERGUI = game:GetService("StarterGui")
 
 if game:GetService("ReplicatedStorage"):FindFirstChild("BZn2q91BzN") then
