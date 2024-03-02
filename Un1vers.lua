@@ -181,7 +181,7 @@ speed.TextWrapped = true
  
 mine.Name = "mine"
 mine.Parent = Frame
-mine.BackgroundColor3 = Color3.fromRGB(123, 255, 247)
+mine.BackgroundColor3 = Color3.fromRGB(170, 240, 209)
 mine.Position = UDim2.new(0.231578946, 0, 0.491228074, 0)
 mine.Size = UDim2.new(0, 45, 0, 29)
 mine.Font = Enum.Font.SourceSans
