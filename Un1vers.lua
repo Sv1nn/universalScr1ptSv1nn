@@ -126,7 +126,7 @@ up.TextSize = 14.000
  
 down.Name = "down"
 down.Parent = Frame
-down.BackgroundColor3 = Color3.fromRGB(215, 255, 121)
+down.BackgroundColor3 = Color3.fromRGB(192, 192, 192)
 down.Position = UDim2.new(0, 0, 0.491228074, 0)
 down.Size = UDim2.new(0, 44, 0, 28)
 down.Font = Enum.Font.SourceSans
