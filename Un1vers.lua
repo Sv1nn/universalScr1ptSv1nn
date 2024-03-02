@@ -136,7 +136,7 @@ down.TextSize = 14.000
  
 onof.Name = "onof"
 onof.Parent = Frame
-onof.BackgroundColor3 = Color3.fromRGB(255, 249, 74)
+onof.BackgroundColor3 = Color3.fromRGB(192, 192, 192)
 onof.Position = UDim2.new(0.702823281, 0, 0.491228074, 0)
 onof.Size = UDim2.new(0, 56, 0, 28)
 onof.Font = Enum.Font.SourceSans
@@ -181,7 +181,7 @@ speed.TextWrapped = true
  
 mine.Name = "mine"
 mine.Parent = Frame
-mine.BackgroundColor3 = Color3.fromRGB(170, 240, 209)
+mine.BackgroundColor3 = Color3.fromRGB(192, 192, 192)
 mine.Position = UDim2.new(0.231578946, 0, 0.491228074, 0)
 mine.Size = UDim2.new(0, 45, 0, 29)
 mine.Font = Enum.Font.SourceSans
