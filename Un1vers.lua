@@ -90,7 +90,8 @@ PlayerTab:AddButton({
           end    
     })
 
-PlayerTab:AddButton({
+ PlayerTab:AddButton({
+		--by Seventh888 (telegram)
 		Name = "Fly (No use Noclip)",
 		Callback = function()
 			OrionLib:MakeNotification({
@@ -425,9 +426,7 @@ PlayerTab:AddButton({
 			})
 		  end    
 	})
-
-    end    
-})
+end
 
 -- visual tab
 
