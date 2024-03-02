@@ -157,7 +157,7 @@ TextLabel.TextWrapped = true
  
 plus.Name = "plus"
 plus.Parent = Frame
-plus.BackgroundColor3 = Color3.fromRGB(133, 145, 255)
+plus.BackgroundColor3 = Color3.fromRGB(192, 192, 192)
 plus.Position = UDim2.new(0.231578946, 0, 0, 0)
 plus.Size = UDim2.new(0, 45, 0, 28)
 plus.Font = Enum.Font.SourceSans
