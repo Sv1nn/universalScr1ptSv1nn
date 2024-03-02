@@ -117,7 +117,7 @@ Frame.Size = UDim2.new(0, 190, 0, 57)
  
 up.Name = "up"
 up.Parent = Frame
-up.BackgroundColor3 = Color3.fromRGB(79, 255, 152)
+up.BackgroundColor3 = Color3.fromRGB(192, 192, 192)
 up.Size = UDim2.new(0, 44, 0, 28)
 up.Font = Enum.Font.SourceSans
 up.Text = "UP"
