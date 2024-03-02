@@ -426,7 +426,8 @@ PlayerTab:AddButton({
         Time = 5
         })
         end
-         })
+         
+        })
 
 -- visual tab
 
