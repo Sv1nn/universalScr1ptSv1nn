@@ -11,7 +11,6 @@ OrionLib:MakeNotification({
 	Time = 5
 })
 
-
 -- player tab
 
 local PlayerTab = Window:MakeTab({
