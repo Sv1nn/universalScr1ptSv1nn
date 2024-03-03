@@ -89,7 +89,7 @@ PlayerTab:AddButton({
           end    
     })
 
-    Tab:AddButton({
+    PlayerTab:AddButton({
         Name = "invisible",
         Callback = function()
             local player = game.Players.LocalPlayer
