@@ -890,7 +890,7 @@ local Section = Tab:AddSection({
 FunTab:AddButton({
     Name = "Azart",
     Callback = function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/Sv1nn/Cards/main/Cards.lua", true))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Sv1nn/Cards/main/Cards.lua", true))()
     OrionLib:MakeNotification({
     Name = "SvinnHub",
     Content = "AzartOn",
