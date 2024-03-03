@@ -886,17 +886,3 @@ local FunTab = Window:MakeTab({
 local Section = Tab:AddSection({
 	Name = "FunSvinn"
 })
-
-FunTab:AddButton({
-    Name = "Azart",
-    Callback = function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/Sv1nn/Cards/main/Cards.lua", true))()
-    OrionLib:MakeNotification({
-    Name = "SvinnHub",
-    Content = "AzartOn",
-    Image = "rbxassetid://4483345998",
-    Time = 5
-    })
-    end
-    
-    })
