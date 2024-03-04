@@ -878,7 +878,7 @@ return {} and ShiftLockAction
 -- FunTab
 
 local FunTab = Window:MakeTab({
-	Name = "FunSv",
+	Name = "Fun",
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
 })
