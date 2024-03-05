@@ -24,7 +24,7 @@ local Section = PlayerTab:AddSection({
 })
 
 PlayerTab:AddButton({
-    Name = "Спидхак",
+    Name = "Speedhack",
     Callback = function()
     game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 80
     OrionLib:MakeNotification({
