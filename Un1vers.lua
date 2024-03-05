@@ -603,7 +603,6 @@ end)
     
     })
 
-    
 -- visual tab
 
 local VisualTab = Window:MakeTab({
@@ -879,18 +878,11 @@ return {} and ShiftLockAction
 -- FunTab
 
 local FunTab = Window:MakeTab({
-	Name = "Fun",
+	Name = "FunSv",
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
 })
 
-local Section = FunTab:AddSection({
+local Section = Tab:AddSection({
 	Name = "FunSvinn"
-})
-
-FunTab:AddButton({
-	Name = "Button!",
-	Callback = function()
-      		print(Hello world)
-  	end    
 })
