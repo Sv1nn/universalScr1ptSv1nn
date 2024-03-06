@@ -895,19 +895,19 @@ BreakTab:AddButton({
 local function moveCharacter()
     local char = game.Players.LocalPlayer.Character or game.Players.LocalPlayer.CharacterAdded:wait()
     
-    char.HumanoidRootPart.CFrame = CFrame.new(-12, 3, -242, -0.7, 2.5e-11, 0.5, 1.e-10, 1, 5.5e-11, -0.5, 1.e-10, -0)
+    char.HumanoidRootPart.CFrame = CFrame.new(-12.7855282, -0.832758486, -180.759125, 0.542836607, -0.222940892, 0.809707224, 1.03087245e-08, 0.964122713, 0.265456915, -0.839838326, -0.144099727, 0.523361146)
     
     RunService.Heartbeat:wait()
     
-    char.HumanoidRootPart.CFrame = CFrame.new(-48, 3, -177, 0.7, 2.5e-11, -0.5, -10.e-11, 1, -8.5e-11, 0.5, 1.e-10, 0)
+    char.HumanoidRootPart.CFrame = CFrame.new(-12.7855282, -0.832758486, -180.759125, 0.542836607, -0.222940892, 0.809707224, 1.03087245e-08, 0.964122713, 0.265456915, -0.839838326, -0.144099727, 0.523361146)
     
     RunService.Heartbeat:wait()
     
-    char.HumanoidRootPart.CFrame = CFrame.new(-12, 3, -177, 0.7, 2.5e-11, 0.5, 7.e-11, 1, -1.e-10, -0.5, 1.e-10, 0)
+    char.HumanoidRootPart.CFrame = CFrame.new(-12.7855282, -0.832758486, -180.759125, 0.542836607, -0.222940892, 0.809707224, 1.03087245e-08, 0.964122713, 0.265456915, -0.839838326, -0.144099727, 0.523361146)
     
     RunService.Heartbeat:wait()
     
-    char.HumanoidRootPart.CFrame = CFrame.new(-48, 3, -242, -0.7, 2.5e-11, -0.5, -4.5e-11, 1, 1.e-10, 0.5, 1.e-10, -0)
+    char.HumanoidRootPart.CFrame = CFrame.new(-12.7855282, -0.832758486, -180.759125, 0.542836607, -0.222940892, 0.809707224, 1.03087245e-08, 0.964122713, 0.265456915, -0.839838326, -0.144099727, 0.523361146)
 end
 
 RunService.Heartbeat:Connect(function()
