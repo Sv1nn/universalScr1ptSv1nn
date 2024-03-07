@@ -922,7 +922,6 @@ BreakTab:AddButton({
         local character = player.Character or player.CharacterAdded:Wait()
         local humanoid = character:WaitForChild("Humanoid")
         local rootPart = character:WaitForChild("HumanoidRootPart")
-        local iceSurface = game.Workspace:WaitForChild("IceSurface")
         local slidePower = 5000
         
         humanoid.Died:Connect(function()
