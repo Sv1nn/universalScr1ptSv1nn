@@ -915,3 +915,32 @@ end)
   	end    
 })
 
+BreakTab:AddButton({
+	Name = "SpeedLegal",
+	Callback = function()
+        local player = game.Players.LocalPlayer
+        local character = player.Character or player.CharacterAdded:Wait()
+        local humanoid = character:WaitForChild("Humanoid")
+        local rootPart = character:WaitForChild("HumanoidRootPart")
+        local iceSurface = game.Workspace:WaitForChild("IceSurface")
+        local slidePower = 5000
+        
+        humanoid.Died:Connect(function()
+            character.Animate.Disabled = true
+        end)
+        
+        while wait() do
+            if rootPart.Position.Y <= iceSurface.Position.Y + iceSurface.Size.Y/2 then
+                local direction = Vector3.new(0, 0, 0)
+                local velocity = rootPart.CFrame.LookVector * slidePower
+                
+                humanoid.WalkSpeed = velocity.Magnitude
+                
+                rootPart.BodyVelocity.Velocity = Vector3.new(velocity.X, rootPart.Velocity.Y, velocity.Z)
+            else
+                humanoid.WalkSpeed = 16
+                rootPart.BodyVelocity.Velocity = Vector3.new(0, 0, 0)
+            end
+        end
+  	end    
+})
