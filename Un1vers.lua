@@ -26,7 +26,7 @@ local Section = PlayerTab:AddSection({
 PlayerTab:AddButton({
     Name = "Speedhack",
     Callback = function()
-    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 8-
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 80
     OrionLib:MakeNotification({
     Name = "SvinnHub",
     Content = "SpeedhackOn",
@@ -915,18 +915,3 @@ end)
   	end    
 })
 
-BreakTab:AddButton({
-	Name = "LegalSpeed",
-	Callback = function()
-        local player = game.Players.LocalPlayer
-        local character = player.Character or player.CharacterAdded:Wait()
-        local humanoid = character:WaitForChild("Humanoid")
-        
-        local speedMultiplier = 2
-        
-        humanoid:GetPropertyChangedSignal("WalkSpeed"):Connect(function()
-            humanoid.WalkSpeed = humanoid.WalkSpeed * speedMultiplier
-        end)
-        
-  	end    
-})
