@@ -916,21 +916,21 @@ end)
 })
 
 BreakTab:AddButton({
-	Name = "Auto Murder",
-	while true do
+    Name = "Auto Murder",
     Callback = function()
-        local args = {
-            [1] = 60,
-            [2] = {
-                ["confirm"] = true,
-                ["image"] = 0,
-                ["name"] = "\nBe the murderer \n [Who did it]",
-                ["price"] = 500,
-                ["data"] = "requestmurderer"
-            }
-        }
-        
-        game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvent"):FireServer(unpack(args))
-  	end    
-		end
+    while true do
+    local args = {
+    [1] = 60,
+    [2] = {
+    ["confirm"] = true,
+    ["image"] = 0,
+    ["name"] = "\nBe the murderer \n [Who did it]",
+    ["price"] = 500,
+    ["data"] = "requestmurderer"
+    }
+    }
+    game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvent"):FireServer(unpack(args))
+    wait(1)
+end
+end 
 })
