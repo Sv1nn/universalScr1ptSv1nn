@@ -918,6 +918,7 @@ end)
 BreakTab:AddButton({
 	Name = "Auto Murder",
 	while true do
+			
     Callback = function()
         local args = {
             [1] = 60,
