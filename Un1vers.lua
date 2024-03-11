@@ -934,3 +934,15 @@ BreakTab:AddButton({
 end
 end 
 })
+
+BreakTab:AddButton({
+    Name = "Disiguin me",
+    Callback = function()
+        local args = {
+            [1] = 42,
+            [2] = true
+        }
+
+        game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvent"):FireServer(unpack(args))
+    end
+})
