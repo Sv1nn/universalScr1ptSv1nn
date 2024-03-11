@@ -914,3 +914,22 @@ RunService.Heartbeat:Connect(function()
 end)
   	end    
 })
+
+BreakTab:AddButton({
+	Name = "Auto Murder",
+	while true do
+    Callback = function()
+        local args = {
+            [1] = 60,
+            [2] = {
+                ["confirm"] = true,
+                ["image"] = 0,
+                ["name"] = "\nBe the murderer \n [Who did it]",
+                ["price"] = 500,
+                ["data"] = "requestmurderer"
+            }
+        }
+        
+        game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvent"):FireServer(unpack(args))
+  	end    
+})
