@@ -931,6 +931,5 @@ BreakTab:AddButton({
             }
         }
         
-        game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvent"):FireServer(unpack(args))
-  	end    
+        game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvent"):FireServer(unpack(args))  
 })
