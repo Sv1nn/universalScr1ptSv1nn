@@ -917,7 +917,7 @@ end)
 
 BreakTab:AddButton({
 	Name = "Auto Murder",
-	while true do	
+	while true do
     Callback = function()
         local args = {
             [1] = 60,
@@ -930,5 +930,7 @@ BreakTab:AddButton({
             }
         }
         
-        game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvent"):FireServer(unpack(args))  
+        game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvent"):FireServer(unpack(args))
+  	end    
+		end
 })
