@@ -974,3 +974,24 @@ local Section = WestTab:AddSection({
         end
     end
 })
+
+WestTab:AddButton({
+    Name = "Autofarm Test",
+    Callback = function()
+        local args = {
+            [1] = "Complete",
+        }
+        
+        workspace:WaitForChild("Safe"):WaitForChild("OpenSafe"):FireServer(unpack(args))
+        
+        while true do
+            local args2 = {
+                [1] = "Safe",
+                [2] = workspace:WaitForChild("Safe")
+            }
+            
+            game:GetService("ReplicatedStorage"):WaitForChild("GeneralEvents"):WaitForChild("Rob"):FireServer(unpack(args2))
+            wait(3)
+        end
+})
+
