@@ -960,7 +960,7 @@ local Section = WestboundTab:AddSection({
     Name = "Westa"
   })
 
-  WestaTab:AddButton({
+  WestTab:AddButton({
 	Name = "AutofarmV1",
 	Callback = function()
         local args = {
