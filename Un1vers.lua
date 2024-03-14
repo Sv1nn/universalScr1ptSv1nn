@@ -956,7 +956,7 @@ local WestTab = Window:MakeTab({
     PremiumOnly = false
   })
 
-local Section = WestboundTab:AddSection({
+local Section = WestTab:AddSection({
     Name = "Westa"
   })
 
