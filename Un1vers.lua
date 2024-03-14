@@ -980,13 +980,10 @@ WestTab:AddButton({
     Callback = function()
         while true do
             local args = {
-                [1] = "Safe",
-                [2] = workspace:WaitForChild("Safe")
+                [1] = "Complete"
             }
-            
-            game:GetService("ReplicatedStorage"):WaitForChild("GeneralEvents"):WaitForChild("Rob"):FireServer(unpack(args))
-            
+            workspace:WaitForChild("Safe"):WaitForChild("OpenSafe"):FireServer(unpack(args))
             wait(3)
-        end        
+        end
     end
 })
