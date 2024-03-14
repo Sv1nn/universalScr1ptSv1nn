@@ -946,3 +946,28 @@ BreakTab:AddButton({
         game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvent"):FireServer(unpack(args))
     end
 })
+
+
+-- Westbound hub
+
+local WestTab = Window:MakeTab({
+    Name = "Westbound",
+    Icon = "rbxassetid://4483345998",
+    PremiumOnly = false
+  })
+
+local Section = WestboundTab:AddSection({
+    Name = "Westa"
+  })
+
+  WestaTab:AddButton({
+	Name = "AutofarmV1",
+	Callback = function()
+        local args = {
+            [1] = "Safe",
+            [2] = workspace:WaitForChild("Safe")
+        }
+        
+        game:GetService("ReplicatedStorage"):WaitForChild("GeneralEvents"):WaitForChild("Rob"):FireServer(unpack(args))
+  	end    
+})
