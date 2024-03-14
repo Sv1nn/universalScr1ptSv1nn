@@ -957,17 +957,17 @@ local WestTab = Window:MakeTab({
   })
 
 local Section = WestTab:AddSection({
-    Name = "Westa"
+    Name = "Westbound"
   })
 
   WestTab:AddButton({
-	Name = "AutofarmV1",
-	Callback = function()
+    Name = "AutofarmV1",
+    Callback = function()
         local args = {
             [1] = "Safe",
             [2] = workspace:WaitForChild("Safe")
         }
         
         game:GetService("ReplicatedStorage"):WaitForChild("GeneralEvents"):WaitForChild("Rob"):FireServer(unpack(args))
-  	end    
+    end    
 })
