@@ -1021,13 +1021,12 @@ WestTab:AddButton({
 	Callback = function()
         while true do
             local args = {
-                [1] = game:GetService("Players").LocalPlayer:WaitForChild("Metal2"),
-                [2] = {
-                    ["Transparency"] = 1
-                }
+                [1] = "Grayridge",
+                [2] = false,
+                [3] = false
             }
             
-            game:GetService("ReplicatedStorage"):WaitForChild("GeneralEvents"):WaitForChild("ChangeProperty"):FireServer(unpack(args))
+            game:GetService("ReplicatedStorage"):WaitForChild("GeneralEvents"):WaitForChild("Spawn"):FireServer(unpack(args))
             wait(60)
         end
   	end    
