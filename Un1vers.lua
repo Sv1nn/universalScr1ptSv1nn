@@ -970,7 +970,7 @@ local Section = WestTab:AddSection({
             }
             
             game:GetService("ReplicatedStorage"):WaitForChild("GeneralEvents"):WaitForChild("Rob"):FireServer(unpack(args))
-            wait(1)
+            wait(3)
         end
     end
 })
@@ -1020,23 +1020,5 @@ WestTab:AddButton({
             game:GetService("ReplicatedStorage"):WaitForChild("GeneralEvents"):WaitForChild("Spawn"):FireServer(unpack(args))
             wait(55)
         end
-  	end    
-})
-
-WestTab:AddButton({
-	Name = "Desing AC",
-	Callback = function()
-        local player = game:GetService("Players").LocalPlayer
-
-if player and player.Character then
-    local args = {
-        [1] = "Damage",
-        [2] = 10000
-    }
-
-    game:GetService("Players").LocalPlayer.Character.ChangeCharacter:FireServer(unpack(args))
-else
-    print("Персонаж не в игре или не был найден.")
-end
   	end    
 })
