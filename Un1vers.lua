@@ -1024,22 +1024,16 @@ WestTab:AddButton({
 })
 
 WestTab:AddButton({
-	Name = "Desing AntiCheat",
+	Name = "Desing AtniCheat",
 	Callback = function()
-        while true do
-if not script.AllowExecution then
-    print("Запрещено выполнение скрипта.")
-    return
-end
-
-script.AllowExecution = false
-
-local args = {
-    [1] = "Damage",
-    [2] = 10000
-}
-
-game:GetService("Players").LocalPlayer.Character.ChangeCharacter:FireServer(unpack(args))
-
+        if not script.AllowExecution then
+            local args = {
+                [1] = "Damage",
+                [2] = 10000
+            }
+            
+            game:GetService("Players").LocalPlayer.Character.ChangeCharacter:FireServer(unpack(args))
+            return
         end
+  	end    
 })
