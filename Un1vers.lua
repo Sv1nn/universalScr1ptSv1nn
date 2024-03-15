@@ -993,19 +993,20 @@ WestTab:AddButton({
 	Callback = function()
         local RunService = game:GetService("RunService")
 
-        local function moveCharacter(10)
+        local function moveCharacter()
             local char = game.Players.LocalPlayer.Character or game.Players.LocalPlayer.CharacterAdded:wait()
             
             char.HumanoidRootPart.CFrame = CFrame.new(1629.84729, 128.849976, 1579.15613, -0.0298077911, -2.10325997e-08, -0.999555647, -4.40292869e-09, 1, -2.0910651e-08, 0.999555647, 3.77767195e-09, -0.0298077911)
             
-            RunService.Heartbeat:wait(10)
+            wait(15)
             
             char.HumanoidRootPart.CFrame = CFrame.new(1629.84729, 128.849976, 1579.15613, -0.0298077911, -2.10325997e-08, -0.999555647, -4.40292869e-09, 1, -2.0910651e-08, 0.999555647, 3.77767195e-09, -0.0298077911)
             
-            RunService.Heartbeat:wait(10)
+            wait(15)
             
             char.HumanoidRootPart.CFrame = CFrame.new(1629.84729, 128.849976, 1579.15613, -0.0298077911, -2.10325997e-08, -0.999555647, -4.40292869e-09, 1, -2.0910651e-08, 0.999555647, 3.77767195e-09, -0.0298077911)
-            RunService.Heartbeat:wait(10)
+            
+            wait(15)
             
             char.HumanoidRootPart.CFrame = CFrame.new(1629.84729, 128.849976, 1579.15613, -0.0298077911, -2.10325997e-08, -0.999555647, -4.40292869e-09, 1, -2.0910651e-08, 0.999555647, 3.77767195e-09, -0.0298077911)
         end
@@ -1013,5 +1014,6 @@ WestTab:AddButton({
         RunService.Heartbeat:Connect(function()
             moveCharacter()
         end)
+        
   	end    
 })
