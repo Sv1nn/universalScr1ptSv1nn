@@ -1017,48 +1017,18 @@ WestTab:AddButton({
 })
 
 WestTab:AddButton({
-	Name = "AutofarmLoader",
+	Name = "AspawnMod",
 	Callback = function()
         while true do
             local args = {
-                [1] = "Safe",
-                [2] = workspace:WaitForChild("Safe")
+                [1] = game:GetService("Players").LocalPlayer:WaitForChild("Metal2"),
+                [2] = {
+                    ["Transparency"] = 1
+                }
             }
             
-            game:GetService("ReplicatedStorage"):WaitForChild("GeneralEvents"):WaitForChild("Rob"):FireServer(unpack(args))
-            wait(3)
-        
-        while true do
-            local args = {
-                [1] = "Complete"
-            }
-            workspace:WaitForChild("Safe"):WaitForChild("OpenSafe"):FireServer(unpack(args))
-            wait(3)
-        
-        local RunService = game:GetService("RunService")
-        
-        local function moveCharacter()
-            local char = game.Players.LocalPlayer.Character or game.Players.LocalPlayer.CharacterAdded:wait()
-            
-            char.HumanoidRootPart.CFrame = CFrame.new(1627.92297, 128.849976, 1579.78149, -0.0333881564, -3.30991874e-08, -0.999442458, 2.13044915e-09, 1, -3.31888224e-08, 0.999442458, -3.23737481e-09, -0.0333881564)
-            
-            RunService.Heartbeat:wait()
-            
-            char.HumanoidRootPart.CFrame = CFrame.new(1627.92297, 128.849976, 1579.78149, -0.0333881564, -3.30991874e-08, -0.999442458, 2.13044915e-09, 1, -3.31888224e-08, 0.999442458, -3.23737481e-09, -0.0333881564)
-            
-            RunService.Heartbeat:wait()
-            
-            char.HumanoidRootPart.CFrame = CFrame.new(1627.92297, 128.849976, 1579.78149, -0.0333881564, -3.30991874e-08, -0.999442458, 2.13044915e-09, 1, -3.31888224e-08, 0.999442458, -3.23737481e-09, -0.0333881564)
-            RunService.Heartbeat:wait()
-            
-            char.HumanoidRootPart.CFrame = CFrame.new(1627.92297, 128.849976, 1579.78149, -0.0333881564, -3.30991874e-08, -0.999442458, 2.13044915e-09, 1, -3.31888224e-08, 0.999442458, -3.23737481e-09, -0.0333881564)
+            game:GetService("ReplicatedStorage"):WaitForChild("GeneralEvents"):WaitForChild("ChangeProperty"):FireServer(unpack(args))
+            wait(60)
         end
-        
-        RunService.Heartbeat:Connect(function()
-            moveCharacter()
-        end)
-    end
-end
   	end    
 })
-
