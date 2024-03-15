@@ -970,7 +970,7 @@ local Section = WestTab:AddSection({
             }
             
             game:GetService("ReplicatedStorage"):WaitForChild("GeneralEvents"):WaitForChild("Rob"):FireServer(unpack(args))
-            wait(20)
+            wait(1)
         end
     end
 })
@@ -983,7 +983,7 @@ WestTab:AddButton({
                 [1] = "Complete"
             }
             workspace:WaitForChild("Safe"):WaitForChild("OpenSafe"):FireServer(unpack(args))
-            wait(3)
+            wait(20)
         end
     end
 })
