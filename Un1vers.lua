@@ -1027,7 +1027,7 @@ WestTab:AddButton({
             }
             
             game:GetService("ReplicatedStorage"):WaitForChild("GeneralEvents"):WaitForChild("Spawn"):FireServer(unpack(args))
-            wait(60)
+            wait(15)
         end
   	end    
 })
