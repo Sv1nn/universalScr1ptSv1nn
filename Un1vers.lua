@@ -1039,7 +1039,7 @@ WestTab:AddButton({
             if not success then
                 print("Ошибка при выполнении скрипта:", error)
             end
-        
+         
             wait(10)
         end
         
