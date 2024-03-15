@@ -996,18 +996,18 @@ WestTab:AddButton({
         local function moveCharacter()
             local char = game.Players.LocalPlayer.Character or game.Players.LocalPlayer.CharacterAdded:wait()
             
-            char.HumanoidRootPart.CFrame = CFrame.new(1205.62915, 99.5820084, 1605.59241, -0.0751954317, 0, -0.997168839, 0, 1, 0, 0.997168839, 0, -0.0751954317)
+            char.HumanoidRootPart.CFrame = CFrame.new(1627.92297, 128.849976, 1579.78149, -0.0333881564, -3.30991874e-08, -0.999442458, 2.13044915e-09, 1, -3.31888224e-08, 0.999442458, -3.23737481e-09, -0.0333881564)
             
             RunService.Heartbeat:wait()
             
-            char.HumanoidRootPart.CFrame = CFrame.new(1205.62915, 99.5820084, 1605.59241, -0.0751954317, 0, -0.997168839, 0, 1, 0, 0.997168839, 0, -0.0751954317)
+            char.HumanoidRootPart.CFrame = CFrame.new(1627.92297, 128.849976, 1579.78149, -0.0333881564, -3.30991874e-08, -0.999442458, 2.13044915e-09, 1, -3.31888224e-08, 0.999442458, -3.23737481e-09, -0.0333881564)
             
             RunService.Heartbeat:wait()
             
-            char.HumanoidRootPart.CFrame = CFrame.new(1205.62915, 99.5820084, 1605.59241, -0.0751954317, 0, -0.997168839, 0, 1, 0, 0.997168839, 0, -0.0751954317)
+            char.HumanoidRootPart.CFrame = CFrame.new(1627.92297, 128.849976, 1579.78149, -0.0333881564, -3.30991874e-08, -0.999442458, 2.13044915e-09, 1, -3.31888224e-08, 0.999442458, -3.23737481e-09, -0.0333881564)
             RunService.Heartbeat:wait()
             
-            char.HumanoidRootPart.CFrame = CFrame.new(1205.62915, 99.5820084, 1605.59241, -0.0751954317, 0, -0.997168839, 0, 1, 0, 0.997168839, 0, -0.0751954317)
+            char.HumanoidRootPart.CFrame = CFrame.new(1627.92297, 128.849976, 1579.78149, -0.0333881564, -3.30991874e-08, -0.999442458, 2.13044915e-09, 1, -3.31888224e-08, 0.999442458, -3.23737481e-09, -0.0333881564)
         end
         
         RunService.Heartbeat:Connect(function()
