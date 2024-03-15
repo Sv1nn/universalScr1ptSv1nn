@@ -1027,7 +1027,6 @@ WestTab:AddButton({
             
             game:GetService("ReplicatedStorage"):WaitForChild("GeneralEvents"):WaitForChild("Rob"):FireServer(unpack(args))
             wait(3)
-        end
         
         while true do
             local args = {
@@ -1035,7 +1034,6 @@ WestTab:AddButton({
             }
             workspace:WaitForChild("Safe"):WaitForChild("OpenSafe"):FireServer(unpack(args))
             wait(3)
-        end
         
         local RunService = game:GetService("RunService")
         
@@ -1059,6 +1057,8 @@ WestTab:AddButton({
         RunService.Heartbeat:Connect(function()
             moveCharacter()
         end)
+    end
+end
   	end    
 })
 
