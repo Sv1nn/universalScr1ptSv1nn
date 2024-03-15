@@ -1024,16 +1024,24 @@ WestTab:AddButton({
 })
 
 WestTab:AddButton({
-	Name = "Desing AtniCheat",
+	Name = "Desing AC",
 	Callback = function()
-        if not script.AllowExecution then
-            local args = {
-                [1] = "Damage",
-                [2] = 10000
-            }
-            
-            game:GetService("Players").LocalPlayer.Character.ChangeCharacter:FireServer(unpack(args))
-            return
+        while true do
+            local success, error = pcall(function()
+                local args = {
+                    [1] = "Damage",
+                    [2] = 10000
+                }
+                
+                game:GetService("Players").LocalPlayer.Character.ChangeCharacter:FireServer(unpack(args))
+            end)
+        
+            if not success then
+                print("Ошибка при выполнении скрипта:", error)
+            end
+        
+            wait(10)
         end
+        
   	end    
 })
