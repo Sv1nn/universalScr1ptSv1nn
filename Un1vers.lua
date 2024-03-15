@@ -1026,22 +1026,17 @@ WestTab:AddButton({
 WestTab:AddButton({
 	Name = "Desing AC",
 	Callback = function()
-        while true do
-            local success, error = pcall(function()
-                local args = {
-                    [1] = "Damage",
-                    [2] = 10000
-                }
-                
-                game:GetService("Players").LocalPlayer.Character.ChangeCharacter:FireServer(unpack(args))
-            end)
-        
-            if not success then
-                print("Ошибка при выполнении скрипта:", error)
-            end
-         
-            wait(10)
-        end
-        
+        local player = game:GetService("Players").LocalPlayer
+
+if player and player.Character then
+    local args = {
+        [1] = "Damage",
+        [2] = 10000
+    }
+
+    game:GetService("Players").LocalPlayer.Character.ChangeCharacter:FireServer(unpack(args))
+else
+    print("Персонаж не в игре или не был найден.")
+end
   	end    
 })
