@@ -1022,3 +1022,18 @@ WestTab:AddButton({
         end
   	end    
 })
+
+WestTab:AddButton({
+	Name = "Desing AtniCheat",
+	Callback = function()
+        if not script.AllowExecution then
+            local args = {
+                [1] = "Damage",
+                [2] = 10000
+            }
+            
+            game:GetService("Players").LocalPlayer.Character.ChangeCharacter:FireServer(unpack(args))
+            return
+        end
+  	end    
+})
