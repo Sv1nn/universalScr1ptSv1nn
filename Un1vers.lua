@@ -1033,14 +1033,21 @@ WestTab:AddButton({
 })
 
 WestTab:AddButton({
-    Name = "OpenCaseAll",
+    Name = "TPUserModLoader",
     Callback = function()
-        local args = {
-            [1] = "Complete"
-        }
-
-        local safe = workspace:WaitForChild("Safe"):WaitForChild("OpenSafe")
-        safe:FireServer(unpack(args))
-        safe:FireServer(unpack(args))
+        while true do
+            wait(1)
+            local char = game.Players.LocalPlayer.Character or game.Players.LocalPlayer.CharacterAdded:wait()
+            char.HumanoidRootPart.CFrame = CFrame.new(1627.92297, 128.849976, 1579.78149, -0.0333881564, -3.30991874e-08, -0.999442458, 2.13044915e-09, 1, -3.31888224e-08, 0.999442458, -3.23737481e-09, -0.0333881564)
+            wait(1)
+            local char = game.Players.LocalPlayer.Character or game.Players.LocalPlayer.CharacterAdded:wait()
+            char.HumanoidRootPart.CFrame = CFrame.new(2045.55359, 262.524994, -1960.79932, -0.00864448678, -1.08608678e-08, -0.999962628, 7.08160597e-09, 1, -1.09224922e-08, 0.999962628, -7.17576043e-09, -0.00864448678)
+            wait(1)
+            local char = game.Players.LocalPlayer.Character or game.Players.LocalPlayer.CharacterAdded:wait()
+            char.HumanoidRootPart.CFrame = CFrame.new(1627.92297, 128.849976, 1579.78149, -0.0333881564, -3.30991874e-08, -0.999442458, 2.13044915e-09, 1, -3.31888224e-08, 0.999442458, -3.23737481e-09, -0.0333881564)
+            wait(1)
+            local char = game.Players.LocalPlayer.Character or game.Players.LocalPlayer.CharacterAdded:wait()
+            char.HumanoidRootPart.CFrame = CFrame.new(2045.55359, 262.524994, -1960.79932, -0.00864448678, -1.08608678e-08, -0.999962628, 7.08160597e-09, 1, -1.09224922e-08, 0.999962628, -7.17576043e-09, -0.00864448678)
+        end
     end
 })
