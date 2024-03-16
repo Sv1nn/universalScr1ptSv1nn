@@ -1049,7 +1049,7 @@ WestTab:AddButton({
             -- Получаем хитбокс (первичную часть персонажа)
             local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
 
-            -- Телепортируем хитбокс
+            -- Телепортируем хитбокс, но оставляем игрока на месте
             humanoidRootPart.CFrame = newPosition
         end)
 
@@ -1065,3 +1065,4 @@ WestTab:AddButton({
         end
     end
 })
+
