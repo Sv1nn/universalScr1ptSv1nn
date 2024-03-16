@@ -1033,21 +1033,35 @@ WestTab:AddButton({
 })
 
 WestTab:AddButton({
-    Name = "TPUserModLoader",
+    Name = "HiTBoxTp",
     Callback = function()
-        while true do
-            wait(1)
-            local char = game.Players.LocalPlayer.Character or game.Players.LocalPlayer.CharacterAdded:wait()
-            char.HumanoidRootPart.CFrame = CFrame.new(1627.92297, 128.849976, 1579.78149, -0.0333881564, -3.30991874e-08, -0.999442458, 2.13044915e-09, 1, -3.31888224e-08, 0.999442458, -3.23737481e-09, -0.0333881564)
-            wait(3)
-            local char = game.Players.LocalPlayer.Character or game.Players.LocalPlayer.CharacterAdded:wait()
-            char.HumanoidRootPart.CFrame = CFrame.new(1859.10095, 104.474281, -1824.229, -0.536658943, -9.7433821e-09, 0.843799233, -1.5413768e-09, 1, 1.05667173e-08, -0.843799233, 4.37011094e-09, -0.536658943)
-            wait(1)
-            local char = game.Players.LocalPlayer.Character or game.Players.LocalPlayer.CharacterAdded:wait()
-            char.HumanoidRootPart.CFrame = CFrame.new(1627.92297, 128.849976, 1579.78149, -0.0333881564, -3.30991874e-08, -0.999442458, 2.13044915e-09, 1, -3.31888224e-08, 0.999442458, -3.23737481e-09, -0.0333881564)
-            wait(3)
-            local char = game.Players.LocalPlayer.Character or game.Players.LocalPlayer.CharacterAdded:wait()
-            char.HumanoidRootPart.CFrame = CFrame.new(1859.10095, 104.474281, -1824.229, -0.536658943, -9.7433821e-09, 0.843799233, -1.5413768e-09, 1, 1.05667173e-08, -0.843799233, 4.37011094e-09, -0.536658943)
+        -- Получаем игрока
+        local player = game.Players.LocalPlayer
+
+        -- Подписываемся на событие добавления персонажа игрока
+        player.CharacterAdded:Connect(function(character)
+            -- Ждем готовности персонажа
+            character:WaitForChild("HumanoidRootPart")
+
+            -- Задаем новую позицию для хитбокса
+            local newPosition = CFrame.new(1627.92297, 128.849976, 1579.78149, -0.0333881564, -3.30991874e-08, -0.999442458, 2.13044915e-09, 1, -3.31888224e-08, 0.999442458, -3.23737481e-09, -0.0333881564)
+
+            -- Получаем хитбокс (первичную часть персонажа)
+            local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
+
+            -- Телепортируем хитбокс
+            humanoidRootPart.CFrame = newPosition
+        end)
+
+        -- Если персонаж уже существует при запуске скрипта
+        if player.Character then
+            local character = player.Character
+            character:WaitForChild("HumanoidRootPart")
+            
+            local newPosition = CFrame.new(1627.92297, 128.849976, 1579.78149, -0.0333881564, -3.30991874e-08, -0.999442458, 2.13044915e-09, 1, -3.31888224e-08, 0.999442458, -3.23737481e-09, -0.0333881564)
+            
+            local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
+            humanoidRootPart.CFrame = newPosition
         end
     end
 })
