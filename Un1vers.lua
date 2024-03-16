@@ -1143,7 +1143,7 @@ WestTab:AddButton({
                 [1] = "Complete"
             }
             workspace:WaitForChild("Safe"):WaitForChild("OpenSafe"):FireServer(unpack(args))
-            wait(0.2)
+            wait(10)
         end
     end
 })
