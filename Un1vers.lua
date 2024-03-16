@@ -1032,3 +1032,15 @@ WestTab:AddButton({
   	end    
 })
 
+Tab:AddButton({
+	Name = "OpenCaseAll",
+	Callback = function()
+        local args = {
+            [1] = "Complete"
+        }
+        
+        local safe = workspace:WaitForChild("Safe"):WaitForChild("OpenSafe")
+        safe:FireServer(unpack(args))
+        safe:FireServer(unpack(args))
+  	end    
+})
