@@ -1061,7 +1061,7 @@ end)
 })
 
 BreakTab:AddButton({
-    Name = "Auto Murder",
+    Name = "AutoMurder",
     Callback = function()
     while true do
     local args = {
@@ -1081,7 +1081,7 @@ end
 })
 
 BreakTab:AddButton({
-    Name = "Disiguin me",
+    Name = "DisiguinMe",
     Callback = function()
         local args = {
             [1] = 42,
@@ -1090,6 +1090,21 @@ BreakTab:AddButton({
 
         game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvent"):FireServer(unpack(args))
     end
+})
+
+BreakTab:AddButton({
+	Name = "autoOpenCase(leg. knife)",
+	Callback = function()
+        while true do
+            local args = {
+                [1] = 66,
+                [2] = "Knife Skins",
+                [3] = "Legendary Case"
+            }
+            
+            game:GetService("ReplicatedStorage"):WaitForChild("RemoteFunction"):InvokeServer(unpack(args))
+            end
+  	end    
 })
 
 
