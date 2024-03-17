@@ -1184,7 +1184,7 @@ WestTab:AddButton({
   	end    
 })
 
-Tab:AddButton({
+WestTab:AddButton({
 	Name = "AutoRespawn",
 	Callback = function()
         local script1 = [[
