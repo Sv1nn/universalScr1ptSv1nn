@@ -1155,11 +1155,11 @@ WestTab:AddButton({
         local RunService = game:GetService("RunService")
 
         local function moveCharacter()
-            local char = game.Players.LocalPlayer.Character or game.Players.LocalPlayer.CharacterAdded:wait(5)
+            local char = game.Players.LocalPlayer.Character or game.Players.LocalPlayer.CharacterAdded:wait( )
             
             char.HumanoidRootPart.CFrame = CFrame.new(1627.92297, 128.849976, 1579.78149, -0.0333881564, -3.30991874e-08, -0.999442458, 2.13044915e-09, 1, -3.31888224e-08, 0.999442458, -3.23737481e-09, -0.0333881564)
             
-            RunService.Heartbeat:wait(5)
+            RunService.Heartbeat:wait()
         end
         
         RunService.Heartbeat:Connect(function()
@@ -1174,12 +1174,41 @@ WestTab:AddButton({
         while true do
             local args = {
                 [1] = "Grayridge",
-                [2] = true,
+                [2] = false,
                 [3] = false
             }
             
             game:GetService("ReplicatedStorage"):WaitForChild("GeneralEvents"):WaitForChild("Spawn"):FireServer(unpack(args))
             wait(10)
         end
+  	end    
+})
+
+Tab:AddButton({
+	Name = "AutoRespawn",
+	Callback = function()
+        local script1 = [[
+            local args = {
+                [1] = "Damage",
+                [2] = 10000
+            }
+        
+            game:GetService("Players").LocalPlayer.Character.ChangeCharacter:FireServer(unpack(args))
+        ]]
+        
+        local script2 = [[
+            local args = {
+                [1] = "Grayridge",
+                [2] = false,
+                [3] = false
+            }
+        
+            game:GetService("ReplicatedStorage"):WaitForChild("GeneralEvents"):WaitForChild("Spawn"):FireServer(unpack(args))
+            ]]
+        
+        loadstring(script1)()
+        
+        loadstring(script2)()
+        
   	end    
 })
