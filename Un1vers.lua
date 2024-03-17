@@ -1185,30 +1185,21 @@ WestTab:AddButton({
 })
 
 WestTab:AddButton({
-	Name = "AutoRespawn",
-	Callback = function()
-        local script1 = [[
-            local args = {
-                [1] = "Damage",
-                [2] = 10000
-            }
-        
-            game:GetService("Players").LocalPlayer.Character.ChangeCharacter:FireServer(unpack(args))
-        ]]
-        
-        local script2 = [[
-            local args = {
-                [1] = "Grayridge",
-                [2] = false,
-                [3] = false
-            }
-        
-            game:GetService("ReplicatedStorage"):WaitForChild("GeneralEvents"):WaitForChild("Spawn"):FireServer(unpack(args))
-            ]]
-        
-        loadstring(script1)()
-        
-        loadstring(script2)()
-        
-  	end    
+    Name = "AutoRespawn",
+    Callback = function()
+        local args1 = {
+            [1] = "Damage",
+            [2] = 10000
+        }
+
+        game:GetService("Players").LocalPlayer.Character.ChangeCharacter:FireServer(unpack(args1))
+
+        local args2 = {
+            [1] = "Grayridge",
+            [2] = false,
+            [3] = false
+        }
+
+        game:GetService("ReplicatedStorage"):WaitForChild("GeneralEvents"):WaitForChild("Spawn"):FireServer(unpack(args2))
+    end    
 })
