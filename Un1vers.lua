@@ -1173,7 +1173,7 @@ WestTab:AddButton({
 	Callback = function()
         while true do
             local args = {
-                [1] = "RedRocks",
+                [1] = "Grayridge",
                 [2] = true,
                 [3] = false
             }
