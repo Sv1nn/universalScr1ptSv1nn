@@ -599,9 +599,9 @@ end)
     })
 
     PlayerTab:AddButton({
-        Name = "Speedhack",
+        Name = "InVisible",
         Callback = function()
-        -- Ranxware | FE Invisibility Module | Version: Beta V1 --
+                  -- Ranxware | FE Invisibility Module | Version: Beta V1 --
 
 local InvisibilitySettings = {
 	TransparentClone = true, -- Makes the clone's body transparent
@@ -738,6 +738,8 @@ char = clone
 char:FindFirstChildOfClass("Humanoid").Died:Connect(function()
 	revert()
 end)
+          end    
+    })
 
 
 -- visual tab
