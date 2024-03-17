@@ -1,3 +1,4 @@
+
 -- Sv1nn Hub
 
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
@@ -1172,8 +1173,8 @@ WestTab:AddButton({
 	Callback = function()
         while true do
             local args = {
-                [1] = "Grayridge",
-                [2] = false,
+                [1] = "RedRocks",
+                [2] = true,
                 [3] = false
             }
             
