@@ -92,7 +92,6 @@ PlayerTab:AddButton({
     PlayerTab:AddButton({
         Name = "FlyV1",
         Callback = function()
-           --Sv1nn--
 local main = Instance.new("ScreenGui")
 local Frame = Instance.new("Frame")
 local up = Instance.new("TextButton")
@@ -103,7 +102,6 @@ local plus = Instance.new("TextButton")
 local speed = Instance.new("TextLabel")
 local mine = Instance.new("TextButton")
  
---Properties:
  
 main.Name = "main"
 main.Parent = game.CoreGui
@@ -200,7 +198,7 @@ local hum = chr and chr:FindFirstChildWhichIsA("Humanoid")
  
 nowe = false
  
-Frame.Active = true -- main = gui
+Frame.Active = true
 Frame.Draggable = true
  
 onof.MouseButton1Down:connect(function()
@@ -454,8 +452,6 @@ STARTERGUI:SetCore("SendNotification",{
 NSound:Play()
 end
 
--- Detect if script already ran
-
 local VdbwjS = Instance.new("StringValue",game:GetService("ReplicatedStorage"))
 VdbwjS.Name = "BZn2q91BzN"
 
@@ -501,7 +497,6 @@ SpeedBox.TextSize = 14.000
 SpeedBox.TextWrapped = true
 
 local controlModule = require(Lp.PlayerScripts:WaitForChild('PlayerModule'):WaitForChild("ControlModule"))
--- Get joystick
 
 local bv = Instance.new("BodyVelocity")
 bv.Name = "VelocityHandler"
@@ -750,8 +745,6 @@ end)
   VisualTab:AddButton({
 	Name = "ShiftLock",
 	Callback = function()
-			-- Remade by Sv1nn
--- Subscribe Sv1nn1
 
 local ShiftLockScreenGui = Instance.new("ScreenGui")
 local ShiftLockButton = Instance.new("ImageButton")
@@ -1022,3 +1015,4 @@ WestTab:AddButton({
         end
   	end    
 })
+
