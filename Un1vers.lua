@@ -1185,21 +1185,17 @@ WestTab:AddButton({
 })
 
 WestTab:AddButton({
-    Name = "AutoRespawn",
-    Callback = function()
-        local args1 = {
-            [1] = "Damage",
-            [2] = 10000
-        }
-
-        game:GetService("Players").LocalPlayer.Character.ChangeCharacter:FireServer(unpack(args1))
-
-        local args2 = {
-            [1] = "Grayridge",
-            [2] = false,
-            [3] = false
-        }
-
-        game:GetService("ReplicatedStorage"):WaitForChild("GeneralEvents"):WaitForChild("Spawn"):FireServer(unpack(args2))
-    end    
+	Name = "AspawnModTest",
+	Callback = function()
+        while true do
+            local args = {
+                [1] = "FortArthur",
+                [2] = true,
+                [3] = false
+            }
+            
+            game:GetService("ReplicatedStorage"):WaitForChild("GeneralEvents"):WaitForChild("Spawn"):FireServer(unpack(args))
+            wait(10)
+        end
+  	end    
 })
