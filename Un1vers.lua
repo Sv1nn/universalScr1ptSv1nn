@@ -1120,7 +1120,7 @@ WestTab:AddButton({
                 [1] = "Complete"
             }
             workspace:WaitForChild("Safe"):WaitForChild("OpenSafe"):FireServer(unpack(args))
-            wait(20)
+            wait(0.1)
         end
     end
 })
@@ -1155,7 +1155,7 @@ WestTab:AddButton({
             }
             
             game:GetService("ReplicatedStorage"):WaitForChild("GeneralEvents"):WaitForChild("Spawn"):FireServer(unpack(args))
-            wait(15)
+            wait(50)
         end
   	end    
 })
