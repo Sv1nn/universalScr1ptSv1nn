@@ -1100,6 +1100,53 @@ BreakTab:AddButton({
     end
 })
 
+BreakTab:AddButton({
+    Name = "AutoOpen leg. Gun",
+    Callback = function()
+        while true do
+            local args = {
+                [1] = 66,
+                [2] = "Gun Skins",
+                [3] = "Legendary Case"
+            }
+            
+            game:GetService("ReplicatedStorage"):WaitForChild("RemoteFunction"):InvokeServer(unpack(args))
+            end
+    end
+})
+
+BreakTab:AddButton({
+    Name = "AutoOpen leg. Chair",
+    Callback = function()
+        while true do
+            local args = {
+                [1] = 66,
+                [2] = "Chair Skins",
+                [3] = "Legendary Case"
+            }
+            
+            game:GetService("ReplicatedStorage"):WaitForChild("RemoteFunction"):InvokeServer(unpack(args))
+            end
+    end
+})
+
+BreakTab:AddButton({
+    Name = "AutoOpen leg. Accessories",
+    Callback = function()
+        while true do
+            local args = {
+                [1] = 66,
+                [2] = "Accessories",
+                [3] = "Knife Ribbons"
+            }
+            
+            game:GetService("ReplicatedStorage"):WaitForChild("RemoteFunction"):InvokeServer(unpack(args))
+            end
+    end
+})
+
+
+
 
 -- Westbound hub
 
