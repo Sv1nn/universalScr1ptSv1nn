@@ -1,3 +1,4 @@
+
 -- Sv1nn Hub
 
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
@@ -1084,6 +1085,21 @@ BreakTab:AddButton({
     end
 })
 
+BreakTab:AddButton({
+    Name = "AutoOpen leg. Knife",
+    Callback = function()
+        while true do
+            local args = {
+                [1] = 66,
+                [2] = "Knife Skins",
+                [3] = "Legendary Case"
+            }
+            
+            game:GetService("ReplicatedStorage"):WaitForChild("RemoteFunction"):InvokeServer(unpack(args))
+            end
+    end
+})
+
 
 -- Westbound hub
 
@@ -1159,4 +1175,3 @@ WestTab:AddButton({
         end
   	end    
 })
-
