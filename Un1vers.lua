@@ -1071,9 +1071,6 @@ BreakTab:AddButton({
     end
 })
 
-BreakTab:AddButton({
-    Name = "AntiDieV3 [WORKING]",
-    Callback = function()
         BreakTab:AddButton({
             Name = "AntiDieV3 [WORKING]",
             Callback = function()
@@ -1231,7 +1228,6 @@ BreakTab:AddButton({
             end
         end
     end
-})
 })
 
 BreakTab:AddButton({
