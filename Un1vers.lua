@@ -25,12 +25,13 @@ local Section = PlayerTab:AddSection({
   Name = "Movement"
 })
 
-PlayerTab:AddToggle({
-	Name = "Speedhack V1",
-	Default = false,
-	Callback = function(Vlues)
-		game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 100
-	end    
+PlayerTab:AddTextbox({
+	Name = "Textbox",
+	Default = "default box input",
+	TextDisappear = true,
+	Callback = function(Value)
+		print(Value)
+	end	  
 })
 
 PlayerTab:AddButton({
