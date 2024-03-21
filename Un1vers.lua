@@ -12692,7 +12692,7 @@ local BreakTab = Window:MakeTab({
 })
 
 local Section = BreakTab:AddSection({
-	Name = "BreakPoint"
+	Name = "General"
 })
 
 BreakTab:AddButton({
@@ -12772,6 +12772,10 @@ BreakTab:AddButton({
         game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvent"):FireServer(unpack(args))
     end
 })
+
+local Section = FunTab:AddSection({
+    Name = "AutoOpenCase"
+  })
 
 BreakTab:AddButton({
     Name = "AutoOpen leg. Knife",
