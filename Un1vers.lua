@@ -25,6 +25,14 @@ local Section = PlayerTab:AddSection({
   Name = "Movement"
 })
 
+PlayerTab:AddToggle({
+	Name = "Speedhack V1",
+	Default = false,
+	Callback = function(Vlues)
+		game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 100
+	end    
+})
+
 PlayerTab:AddButton({
     Name = "Speedhack",
     Callback = function()
@@ -14654,3 +14662,5 @@ end)
 -- Finished update!
       end    
 })
+
+OrionLib:Init()
