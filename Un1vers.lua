@@ -38,48 +38,71 @@ PlayerTab:AddButton({
     PlayerTab:AddButton({
         Name = "Speedhack V2",
         Callback = function()
-            -- Создаем GUI-кнопки для управления перемещением персонажа
+            -- Получаем игрока
+local player = game.Players.LocalPlayer
+
+-- Устанавливаем флаг, который будет указывать, что персонаж быстрый
+local isFast = true
+
+-- Устанавливаем направление движения персонажа
+local moveDirection = Vector3.new(0, 0, 0)
+
+-- Функция для обновления положения персонажа каждый кадр игры
+local function updateCharacterPosition()
+    -- Получаем персонажа игрока
+    local character = player.Character
+    if character then
+        -- Получаем корневую часть персонажа (HumanoidRootPart)
+        local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
+        
+        -- Получаем вектор движения, учитывая выбранную скорость
+        local moveVector = moveDirection * (isFast and 10 or 5)
+        
+        -- Устанавливаем новое положение персонажа с учетом его скорости
+        local newPosition = humanoidRootPart.Position + moveVector
+        
+        -- Пускаем луч вперед, чтобы обнаружить препятствия
+        local ray = Ray.new(humanoidRootPart.Position, moveVector)
+        local hitPart, hitPosition = workspace:FindPartOnRay(ray)
+        if hitPart then
+            newPosition = hitPosition - moveVector:Unit() * 2 -- Отступаем от препятствия
+        end
+        
+        -- Устанавливаем новое положение
+        humanoidRootPart.CFrame = CFrame.new(newPosition)
+    end
+end
+
+-- Подписываемся на событие обновления кадра игры (Heartbeat), чтобы вызывать функцию обновления положения персонажа
+game:GetService("RunService").Heartbeat:Connect(updateCharacterPosition)
+
+-- Создаем GUI-кнопки для управления перемещением персонажа
 local gui = Instance.new("ScreenGui")
 gui.Parent = game.Players.LocalPlayer.PlayerGui
 
 local buttonSize = UDim2.new(0.15, 0, 0.1, 0)
-local cornerRadius = UDim.new(0, 5)
-local blackColor = Color3.fromRGB(30, 30, 30)  -- Нежно черный цвет
 
 local upButton = Instance.new("TextButton")
 upButton.Text = "Up"
 upButton.Size = buttonSize
 upButton.Position = UDim2.new(0.425, 0, 0.1, 0)
 upButton.Parent = gui
-upButton.BackgroundColor3 = blackColor
-upButton.BorderColor3 = blackColor
-upButton.AutoButtonColor = false
-upButton.BorderSizePixel = 0
-upButton.TextColor3 = Color3.new(1, 1, 1)
-upButton.Font = Enum.Font.SourceSans
-upButton.TextSize = 18
-upButton.TextScaled = true
-upButton.TextWrapped = true
-upButton.ClipsDescendants = true
-upButton.TextXAlignment = Enum.TextXAlignment.Center
-upButton.TextYAlignment = Enum.TextYAlignment.Center
-upButton.TextStrokeColor3 = Color3.new(0, 0, 0)
-upButton.TextStrokeTransparency = 0
-upButton.ZIndex = 2
-upButton.CornerRadius = cornerRadius
 
-local downButton = upButton:Clone()
+local downButton = Instance.new("TextButton")
 downButton.Text = "Down"
+downButton.Size = buttonSize
 downButton.Position = UDim2.new(0.425, 0, 0.6, 0)
 downButton.Parent = gui
 
-local leftButton = upButton:Clone()
+local leftButton = Instance.new("TextButton")
 leftButton.Text = "Left"
+leftButton.Size = buttonSize
 leftButton.Position = UDim2.new(0.3, 0, 0.35, 0)
 leftButton.Parent = gui
 
-local rightButton = upButton:Clone()
+local rightButton = Instance.new("TextButton")
 rightButton.Text = "Right"
+rightButton.Size = buttonSize
 rightButton.Position = UDim2.new(0.55, 0, 0.35, 0)
 rightButton.Parent = gui
 
@@ -116,22 +139,6 @@ speedButton.Text = "Toggle Speed"
 speedButton.Size = UDim2.new(0.2, 0, 0.05, 0)
 speedButton.Position = UDim2.new(0.4, 0, 0.8, 0)
 speedButton.Parent = gui
-speedButton.BackgroundColor3 = blackColor
-speedButton.BorderColor3 = blackColor
-speedButton.AutoButtonColor = false
-speedButton.BorderSizePixel = 0
-speedButton.TextColor3 = Color3.new(1, 1, 1)
-speedButton.Font = Enum.Font.SourceSans
-speedButton.TextSize = 18
-speedButton.TextScaled = true
-speedButton.TextWrapped = true
-speedButton.ClipsDescendants = true
-speedButton.TextXAlignment = Enum.TextXAlignment.Center
-speedButton.TextYAlignment = Enum.TextYAlignment.Center
-speedButton.TextStrokeColor3 = Color3.new(0, 0, 0)
-speedButton.TextStrokeTransparency = 0
-speedButton.ZIndex = 2
-speedButton.CornerRadius = cornerRadius
 
 -- Обработка нажатия на кнопку для переключения скорости
 speedButton.MouseButton1Click:Connect(function()
@@ -12915,7 +12922,7 @@ local FunTab = Window:MakeTab({
     Name = "Funny"
   })
 
-  PlayerTab:AddButton({
+  FunTab:AddButton({
     Name = "Animation R15 [BY Energize]",
     Callback = function()
               -- Energize by illremember, fe animations
