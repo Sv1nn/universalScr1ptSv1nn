@@ -36,7 +36,7 @@ PlayerTab:AddButton({
     })
 
     PlayerTab:AddButton({
-        Name = "Speedhack V2",
+        Name = "Speedhack V2 [DesingAntiCheat]",
         Callback = function()
             loadstring(game:HttpGet("https://raw.githubusercontent.com/Sv1nn/UniversShifer/main/speedhackUn1vers.lua"))()
         end
