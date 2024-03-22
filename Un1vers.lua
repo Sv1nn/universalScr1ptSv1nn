@@ -14662,5 +14662,3 @@ end)
 -- Finished update!
       end    
 })
-
-OrionLib:Init()
