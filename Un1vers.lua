@@ -1368,19 +1368,4 @@ WestTab:AddButton({
             game:GetService("ReplicatedStorage"):WaitForChild("GeneralEvents"):WaitForChild("Spawn"):FireServer(unpack(args))
             wait(50)
         end
-  	end    
-})
-
-
--- FunTab
-
-local FunTab = Window:MakeTab({
-    Name = "Fun",
-    Icon = "rbxassetid://4483345998",
-    PremiumOnly = false
-  })
-  
-  local Section = FunTab:AddSection({
-    Name = "Funny"
-  })
-
+  	
