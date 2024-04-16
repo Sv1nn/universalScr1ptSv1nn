@@ -1132,31 +1132,6 @@ local Section = BreakTab:AddSection({
 	Name = "BreakPoint"
 })
 
-BreakTab:AddToggle({
-	Name = "Auto-Farm",
-	Default = false,
-	Callback = function(Value)
-		print(Value)
-
-_G.on = (Value)
-while _G.on and wait() do
-    pcall(function()
-    game:GetService("ReplicatedStorage").RemoteEvent:FireServer(16, "secret")
-    end)
-    wait()
-    for i, v in pairs(game.Players:GetPlayers()) do
-        if v.Name == game.Playes.LocalPlayer.Name then 
-        else
-            pcall(function()
-            game.GetService.("ReplicatedStorage").RemoteEvent.FireServer(30, v)
-            end)
-        end
-    end
-end
-
-	end    
-})
-
 BreakTab:AddButton({
 	Name = "AntiDieV1 [WORKING]",
 	Callback = function()
