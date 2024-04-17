@@ -11,6 +11,29 @@ OrionLib:MakeNotification({
 	Time = 5
 })
 
+
+-- Values
+_G.AutoMurder = true
+
+-- Function
+function AutoMurder()
+	while _G.AutoMurder == true do
+		local args = {
+			[1] = 60,
+			[2] = {
+				["confirm"] = true,
+				["image"] = 0,
+				["name"] = "\nBe the murderer \n [Who did it]",
+				["price"] = 500,
+				["data"] = "requestmurderer"
+			}
+		}
+		
+		game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvent"):FireServer(unpack(args))
+	 end
+    end
+
+
 -- Movement tab
 
 local MovementTab = Window:MakeTab({
@@ -71,4 +94,14 @@ MovementTab:AddButton({
 
         game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvent"):FireServer(unpack(args))
     end
+})
+
+-- Toggle
+MovementTab:AddToggle({
+	Name = "AutoMurder",
+	Default = false,
+	Callback = function(Value)
+		_G.AutoMurder == Value
+		AutoMurder()
+	end    
 })
